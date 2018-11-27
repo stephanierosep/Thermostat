@@ -28,12 +28,21 @@ describe('Thermostat', function() {
   }
   expect(thermostat.getCurrentTemperature()).toEqual(10);
 });
+
   it('has power saving mode on by default', function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
+
   it('it can switch psm off', function() {
     thermostat.switchPowerSavingModeOff();
     expect(thermostat.isPowerSavingModeOn()).toBe(false);
   });
 
+  it('it can switch psm off', function() {
+    thermostat.switchPowerSavingModeOff();
+  expect(thermostat.isPowerSavingModeOn()).toBe(false);
+    thermostat.switchPowerSavingModeOn();
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
+  
 });
