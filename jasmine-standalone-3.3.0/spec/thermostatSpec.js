@@ -21,4 +21,19 @@ describe('Thermostat', function() {
     thermostat.down();
   expect(thermostat.getCurrentTemperature()).toEqual(19);
   });
+
+  it('has a minimum of 10 degrees', function() {
+    for (var i = 0; i < 11; i++) {
+      thermostat.down();
+  }
+  expect(thermostat.getCurrentTemperature()).toEqual(10);
+});
+  it('has power saving mode on by default', function() {
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
+  it('it can switch psm off', function() {
+    thermostat.switchPowerSavingModeOff();
+    expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
+
 });
