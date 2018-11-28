@@ -3,6 +3,14 @@ $( document ).ready(function() {
 
   function update() {
     $( temperature_display ).html(thermostat.getCurrentTemperature());
+      if(thermostat.energyUsage() == "low-usage") {
+        newcolor = "green";
+      } else if(thermostat.energyUsage() == "medium-usage") {
+        newcolor = "black";
+      } else {
+        newcolor = "red";
+      }
+    $(temperature_display).css("color", newcolor)
   };
   update();
 
