@@ -14,16 +14,17 @@
 
 
   <body style="background-color:limegreen;">
+    <p id="temperature_display">
+    </p>
 
-    <form class="">
-      <input type="button" name="raise" value="raise">
-      <input type="button" name="lower" value="lower">
-      <input type="button" name="reset" value="reset">
-      <input type="button" name="psm" value="power saving mode on">
-      <input type="button" name="psm off" value="power saving mode off">
-    </form>
-
+    <button id="raise">raise</button>
+    <button id="lower">lower</button>
+    <button id="reset">reset</button>
+    <button id="psm_on">power saving mode on</button>
+    <button id="psm_off">power saving mode off</button>
 
     <script src="src/thermostat.js"></script>
+    <script src="jquery.js"></script>
+    <script src="src/interface.js"></script>
   </body>
 </html>

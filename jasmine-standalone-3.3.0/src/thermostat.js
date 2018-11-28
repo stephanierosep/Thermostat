@@ -15,7 +15,7 @@
   };
 
   Thermostat.prototype.up = function() {
-    if(this.isMaximumTemperature()) {
+    if(this.isAtOrAboveMaximumTemperature()) {
       return;
     }
     this.temperature += 1;
@@ -39,11 +39,11 @@
   Thermostat.prototype.switchPowerSavingModeOn = function() {
     this.isPowerSavingMode = true;
   }
-  Thermostat.prototype.isMaximumTemperature = function() {
+  Thermostat.prototype.isAtOrAboveMaximumTemperature = function() {
     if (this.isPowerSavingModeOn() === false) {
-      return this.temperature === this.MAX_TEMPERATURE;
+      return this.temperature >= this.MAX_TEMPERATURE;
     }
-    return this.temperature === this.PSM_MAX_TEMPERATURE;
+    return this.temperature >= this.PSM_MAX_TEMPERATURE;
   }
   Thermostat.prototype.resetTemperature = function() {
     this.temperature = this.DEFAULT_TEMPERATURE;
