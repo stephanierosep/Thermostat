@@ -2,7 +2,7 @@ $( document ).ready(function() {
   var thermostat = new Thermostat;
 
   function update() {
-    $( temperature_display ).html(thermostat.getCurrentTemperature());
+    $( temperature_display).html(thermostat.getCurrentTemperature());
     $( temperature_display ).attr("class", thermostat.energyUsage());
   }
   update();

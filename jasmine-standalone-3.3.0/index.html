@@ -3,12 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
+    <h1>World Thermostat</h1>
     <link rel="stylesheet" type="text/css" href="colour.css">
+
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        background-image: url("https://wallpapersite.com/images/wallpapers/miui-8-2560x1440-rainy-weather-background-minimal-hd-10471.png");
+
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    </style>
   </head>
 
   <body>
     <p id="temperature_display">
     </p>
+
+    <style>
+      body {
+        text-align:center;
+        margin-top: 200px;
+        margin-bottom: 200px;
+      }
+
+    </style>
+
+    <marquee behavior="scroll" direction="left">WEATHER!</marquee>
 
     <button id="raise">raise</button>
     <button id="lower">lower</button>
@@ -19,16 +45,5 @@
     <script src="src/thermostat.js"></script>
     <script src="jquery.js"></script>
     <script src="src/interface.js"></script>
-
-    <section>
-      <h1>Current temperature: <span id="current-temperature">20</span></h1>
-      <select id="current-city">
-      <option value="london">London</option>
-      <option value="newyork">New York</option>
-      <option value="paris">Paris</option>
-      <option value="tokyo">Tokyo</option>
-    </select>
-    </section>
-    </section>
   </body>
 </html>
